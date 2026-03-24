@@ -1,0 +1,223 @@
+/* style.css */
+:root {
+    --primary: #0077b6;     /* Blue - energy theme */
+    --secondary: #00a86b;   /* Green - eco/savings */
+    --accent: #f4a261;      /* Orange - highlight */
+    --dark: #1e3a8a;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: var(--dark);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 12px;
+    transition: transform 0.3s;
+}
+
+.logo:hover img {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.nav-links a.active {
+    background-color: var(--accent);
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1200x400/?energy') center/cover;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.accordion {
+    margin-top: 2rem;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background: #f1f3f5;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.accordion-header:hover {
+    background: #e9ecef;
+}
+
+.accordion-content {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: white;
+}
+
+.accordion-content.open {
+    padding: 1.5rem;
+    max-height: 300px;
+}
+
+/* Footer with FAQ - Non-button style */
+footer {
+    background-color: #0d47a1;
+    color: white;
+    padding: 3rem 5% 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.faq-footer {
+    margin-bottom: 2.5rem;
+}
+
+.faq-footer h3 {
+    color: #ffd700;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* FAQ Item */
+.faq-item {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.faq-question {
+    background-color: #1565c0;
+    color: white;
+    padding: 16px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.faq-question:hover {
+    background-color: #1e88e5;
+    padding-left: 25px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #0d47a1;
+    color: #e3f2fd;
+    padding: 0 20px;
+    transition: max-height 0.4s ease-out;
+    line-height: 1.6;
+}
+
+.faq-answer.open {
+    padding: 18px 20px;
+}
+
+/* Footer info */
+.footer-info {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 1.8rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
